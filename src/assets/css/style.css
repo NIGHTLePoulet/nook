@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/instrument-sans';
+@import '@fontsource-variable/fraunces';
+
+:root {
+  /* Backgrounds & surfaces */
+  --background: #faf8f5;
+  --foreground: #1a1714;
+  --card: #ffffff;
+  --card-foreground: #1a1714;
+
+  /* Brand */
+  --primary: #e85c3a;
+  --primary-foreground: #ffffff;
+  --primary-hover: #d44e2e;
+
+  /* Secondary & muted surfaces */
+  --secondary: #f2ede8;
+  --secondary-foreground: #4a4540;
+  --muted: #ede8e3;
+  --muted-foreground: #7a7068;
+
+  /* Accent (same as primary for this design) */
+  --accent: #e85c3a;
+  --accent-foreground: #ffffff;
+
+  /* Structure */
+  --border: #e5ded8;
+  --ring: #e85c3a;
+  --shadow-sm: 0 1px 3px rgba(26, 23, 20, 0.06), 0 1px 2px rgba(26, 23, 20, 0.04);
+  --shadow-md: 0 4px 16px rgba(26, 23, 20, 0.08), 0 2px 6px rgba(26, 23, 20, 0.05);
+  --shadow-lg: 0 8px 32px rgba(26, 23, 20, 0.1), 0 3px 10px rgba(26, 23, 20, 0.06);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Tag palette */
+  --tag-tech-bg: #eef2ff;
+  --tag-tech-fg: #4338ca;
+  --tag-design-bg: #fdf2f8;
+  --tag-design-fg: #9d174d;
+  --tag-science-bg: #ecfdf5;
+  --tag-science-fg: #065f46;
+  --tag-culture-bg: #fffbeb;
+  --tag-culture-fg: #92400e;
+  --tag-health-bg: #fff1f2;
+  --tag-health-fg: #be123c;
+  --tag-business-bg: #f0f9ff;
+  --tag-business-fg: #0369a1;
+  --tag-default-bg: #f5f5f4;
+  --tag-default-fg: #57534e;
+}
+
+.dark {
+  /* Backgrounds & surfaces */
+  --background: #111009;
+  --foreground: #f0ebe5;
+  --card: #1c1914;
+  --card-foreground: #f0ebe5;
+
+  /* Brand */
+  --primary: #e85c3a;
+  --primary-foreground: #ffffff;
+  --primary-hover: #f06a46;
+
+  /* Secondary & muted surfaces */
+  --secondary: #26221c;
+  --secondary-foreground: #c4b8af;
+  --muted: #201d18;
+  --muted-foreground: #8a7e76;
+
+  /* Accent */
+  --accent: #e85c3a;
+  --accent-foreground: #ffffff;
+
+  /* Structure */
+  --border: #2c2720;
+  --ring: #e85c3a;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4), 0 3px 10px rgba(0, 0, 0, 0.25);
+
+  /* Tag palette — darkened */
+  --tag-tech-bg: #1e2035;
+  --tag-tech-fg: #a5b4fc;
+  --tag-design-bg: #2a1624;
+  --tag-design-fg: #f9a8d4;
+  --tag-science-bg: #0d2420;
+  --tag-science-fg: #6ee7b7;
+  --tag-culture-bg: #2a2010;
+  --tag-culture-fg: #fcd34d;
+  --tag-health-bg: #2a1020;
+  --tag-health-fg: #fda4af;
+  --tag-business-bg: #0c1f30;
+  --tag-business-fg: #7dd3fc;
+  --tag-default-bg: #201e1c;
+  --tag-default-fg: #a8a29e;
+}
+
+@theme {
+  --color-background: var(--background);
+
+  --color-primary: var(--primary);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-body: 'Instrument Sans Variable', system-ui, sans-serif;
+}
