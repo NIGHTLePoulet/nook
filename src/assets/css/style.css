@@ -102,12 +102,28 @@
 
 @theme {
   --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
   --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
 
+  --color-border: var(--border);
+
+  --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
   --font-display: 'Fraunces Variable', Georgia, serif;
   --font-body: 'Instrument Sans Variable', system-ui, sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE et Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-x: auto;
+  overflow-y: hidden;
 }
