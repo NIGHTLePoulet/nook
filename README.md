@@ -1,48 +1,82 @@
-# .
+# Nook
 
-This template should help get you started developing with Vue 3 in Vite.
+A personal space to save and organize articles to read later.
 
-## Recommended IDE Setup
+## Overview
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Nook is a Vue.js application that allows users to save articles by adding their URLs to a personal reading list.
 
-## Recommended Browser Setup
+When an article is added, Nook retrieves its metadata and displays it as a card. Users can then browse, sort, and manage their saved articles.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+The project was built to practice Vue.js, state management, and API integration in a frontend-only application.
 
-## Type Support for `.vue` Imports in TS
+## Features
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+* Save articles using their URLs
+* Retrieve article metadata from their URLs
+* Display saved articles as cards
+* Sort saved articles
+* Manage a personal reading list
+* Read saved articles later
 
-## Customize configuration
+## Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+* Vue.js
+* TypeScript
+* Vue Router
+* Vite
 
-## Project Setup
+## API
 
-```sh
+Nook uses OpenGraph.io to retrieve metadata from article URLs, such as titles, descriptions, and images.
+
+Since Nook is a frontend-only application, the public version uses mock data instead of exposing the OpenGraph.io API key in the client-side application.
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/NIGHTLePoulet/nook.git
+cd nook
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 3. Start the development server
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+The application will then be available locally.
 
-```sh
+## Production
+
+Build the application for production:
+
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Linting
 
-```sh
+Run ESLint:
+
+```bash
 npm run lint
 ```
+
+## Screenshots
+
+## What I Learned
+
+This project helped me improve my understanding of:
+
+## License
+
+This project is for learning and portfolio purposes.
