@@ -9,11 +9,12 @@
           class="w-full pl-9 pr-4 py-2.5 rounded-full text-sm outline-none bg-secondary text-foreground border-[1.5px] border-transparent"
         />
       </div>
-      <button
+      <RouterLink
+        :to="{ name: 'modal.create' }"
         class="shrink-0 flex items-center mx-auto gap-1.5 rounded-full bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold cursor-pointer"
       >
         <span class="text-base leading-none">+</span>
-      </button>
+      </RouterLink>
     </div>
 
     <div class="hide-scrollbar max-w-5xl mx-auto flex items-center mt-3 overflow-x-auto pb-1 gap-2">
