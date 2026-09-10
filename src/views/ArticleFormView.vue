@@ -2,8 +2,9 @@
   <div class="min-h-full px-4 py-8">
     <section class="max-w-xl mc-auto">
       <RouterLink
-        to="previous-page"
+        :to="{name: 'articles.show'}"
         class="inline-flex items-center gap-1.5 text-sm font-medium mb-8 text-muted-foreground"
+        @click="toolbarToggle = true"
       >
         <PreviousPageIcon />
 

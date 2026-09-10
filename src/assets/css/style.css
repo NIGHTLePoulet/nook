@@ -121,6 +121,9 @@
   --font-display: 'Fraunces Variable', Georgia, serif;
   --font-body: 'Instrument Sans Variable', system-ui, sans-serif;
 
+  --color-tag-design-bg: var(--tag-design-bg);
+  --color-tag-design-fg: var(--tag-design-fg);
+
 }
 
 .hide-scrollbar::-webkit-scrollbar {
