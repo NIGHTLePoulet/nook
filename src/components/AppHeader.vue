@@ -1,15 +1,15 @@
-<script setup lang="ts">
-import LogoApp from '@/components/images/LogoApp.vue'
-import DarkModeIcon from '@/components/icons/DarkModeIcon.vue'
-</script>
 <template>
   <header class="sticky top-0 z-30 flex items-center justify-between px-4 py-3">
-    <a href="#" class="flex items-center gap-2">
+    <RouterLink
+      :to="{ name: 'articles.show' }"
+      class="flex items-center gap-2"
+      @click="toolbarToggle = true"
+    >
       <div class="bg-primary size-7 rounded-lg flex items-center justify-center">
         <LogoApp />
       </div>
       <span class="font-display font-semibold tracking-tight">Nook</span>
-    </a>
+    </RouterLink>
 
     <div class="flex items-center gap-2">
       <p class="text-xs text-muted-foreground">n unread</p>
@@ -22,3 +22,12 @@ import DarkModeIcon from '@/components/icons/DarkModeIcon.vue'
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+import LogoApp from '@/components/images/LogoApp.vue'
+import DarkModeIcon from '@/components/icons/DarkModeIcon.vue'
+import { inject } from 'vue'
+import { modalDisplayKey } from '@/keys.ts'
+
+const toolbarToggle = inject(modalDisplayKey)
+</script>
