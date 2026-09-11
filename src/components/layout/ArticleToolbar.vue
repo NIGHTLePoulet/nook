@@ -1,6 +1,6 @@
 <template>
   <section class="sticky top-0 z-20 px-4 py-4 bg-background border-b border-b-border">
-    <div class="max-w-5xl flex items-center gap-3">
+    <div class="max-w-5xl mx-auto flex items-center gap-3">
       <div class="relative w-full">
         <SearchIcon class="absolute left-3 top-1/2 -translate-y-1/2" />
         <input
@@ -14,6 +14,7 @@
         class="shrink-0 flex items-center mx-auto gap-1.5 rounded-full bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold cursor-pointer"
       >
         <span class="text-base leading-none">+</span>
+        <span class="hidden sm:inline">Save</span>
       </RouterLink>
     </div>
 

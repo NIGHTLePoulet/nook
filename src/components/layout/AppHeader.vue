@@ -12,7 +12,7 @@
     </RouterLink>
 
     <div class="flex items-center gap-2">
-      <p class="text-xs text-muted-foreground">n unread</p>
+      <p class="text-xs text-muted-foreground bg-secondary font-medium rounded-full px-2 py-0.5">n unread</p>
       <button
         title="Switch to dark mode"
         class="cursor-pointer size-9 flex items-center justify-center bg-muted rounded-full text-muted-foreground"

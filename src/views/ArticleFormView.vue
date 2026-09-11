@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-full px-4 py-8">
-    <section class="max-w-xl mc-auto">
+    <section class="max-w-xl mx-auto">
       <RouterLink
         :to="{name: 'articles.show'}"
         class="inline-flex items-center gap-1.5 text-sm font-medium mb-8 text-muted-foreground"
