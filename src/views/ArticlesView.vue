@@ -4,7 +4,9 @@
     <p class="text-xs text-muted-foreground">Page n of n</p>
   </div>
 
-  <ArticleCard />
+  <div class="grid grid-cols-1 gap-5">
+    <ArticleCard /><ArticleCard /><ArticleCard /><ArticleCard /><ArticleCard /><ArticleCard />
+  </div>
 </template>
 
 <script setup lang="ts">

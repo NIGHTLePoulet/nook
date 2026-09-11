@@ -1,5 +1,5 @@
 <template>
-  <section class="sticky top-0 z-20 px-4 py-4 border-b border-b-border">
+  <section class="sticky top-0 z-20 px-4 py-4 bg-background border-b border-b-border">
     <div class="max-w-5xl flex items-center gap-3">
       <div class="relative w-full">
         <SearchIcon class="absolute left-3 top-1/2 -translate-y-1/2" />
