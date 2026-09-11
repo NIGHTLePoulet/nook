@@ -1,5 +1,7 @@
 <template>
-  <article class="rounded-[14px] overflow-hidden flex flex-col cursor-pointer bg-card border border-border shadow-sm">
+  <article
+    class="rounded-[14px] overflow-hidden flex flex-col cursor-pointer bg-card border border-border shadow-sm"
+  >
     <RouterLink to="/">
       <div class="relative overflow-hidden h-45 bg-muted">
         <slot name="card__media"></slot>

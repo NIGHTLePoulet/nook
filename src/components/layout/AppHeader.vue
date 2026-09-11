@@ -11,10 +11,15 @@
       <span class="font-display font-semibold tracking-tight">Nook</span>
     </RouterLink>
 
-    <span class="text-xs mr-auto ml-3 bg-primary/85 px-2 py-0.5 rounded-full text-primary-foreground">Demo</span>
+    <span
+      class="text-xs mr-auto ml-3 bg-primary/85 px-2 py-0.5 rounded-full text-primary-foreground"
+      >Demo</span
+    >
 
     <div class="flex items-center gap-2">
-      <p class="text-xs text-muted-foreground bg-secondary font-medium rounded-full px-2 py-0.5">n unread</p>
+      <p class="text-xs text-muted-foreground bg-secondary font-medium rounded-full px-2 py-0.5">
+        n unread
+      </p>
       <button
         title="Switch to dark mode"
         class="cursor-pointer size-9 flex items-center justify-center bg-muted rounded-full text-muted-foreground"

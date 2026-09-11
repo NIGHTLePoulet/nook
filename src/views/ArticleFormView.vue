@@ -2,7 +2,7 @@
   <div class="min-h-full px-4 py-8">
     <section class="max-w-xl mx-auto">
       <RouterLink
-        :to="{name: 'articles.show'}"
+        :to="{ name: 'articles.show' }"
         class="inline-flex items-center gap-1.5 text-sm font-medium mb-8 text-muted-foreground"
         @click="toolbarToggle = true"
       >
@@ -79,7 +79,9 @@
             </h3>
 
             <div class="mb-2 flex flex-wrap gap-1.5">
-              <button class="cursor-pointer inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium bg-muted text-muted-foreground">
+              <button
+                class="cursor-pointer inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium bg-muted text-muted-foreground"
+              >
                 #Test
 
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
