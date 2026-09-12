@@ -16,7 +16,7 @@
         Paste a URL and we will fetch the details automatically.
       </p>
 
-      <form action="/article/new" method="POST">
+      <form  @submit.prevent method="POST">
         <label class="mb-6 inline-block w-full">
           <span
             class="inline-block text-xs font-semibold mb-1.5 uppercase tracking-wide text-muted-foreground"
@@ -28,10 +28,11 @@
             class="w-full px-4 py-3 outline-none bg-card border-[1.5px] border-border text-foreground rounded-xl text-sm"
             placeholder="https://example.com/my-article"
             required
+            v-model="url"
           />
         </label>
 
-        <article>
+        <article v-if="isUrlValid">
           <div class="rounded-[14px] overflow-hidden mb-6 bg-card border border-border shadow-sm">
             <div class="h-45 bg-muted relative">
               <span
@@ -115,8 +116,8 @@
 
         <button
           type="submit"
-          class="w-full py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 bg-primary cursor-pointer text-primary-foreground disabled:opacity-40 disabled: pointer-events-none"
-          disabled
+          class="w-full py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 bg-primary cursor-pointer text-primary-foreground disabled:opacity-40 disabled: disabled:pointer-events-none"
+          :disabled="!isUrlValid"
         >
           Paste a URL above to continue
         </button>
@@ -126,17 +127,27 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from 'vue'
+import { computed, inject, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { modalDisplayKey } from '@/keys.ts'
 import PreviousPageIcon from '@/components/icons/PreviousPageIcon.vue'
 
 const route = useRoute()
 const toolbarToggle = inject(modalDisplayKey)
+const url = ref('https://example.com/article-1')
 
 if (route.name === 'modal.create') {
   toolbarToggle.value = false
 }
 
 const categoryButtonArray = ['Technology', 'Design', 'Science', 'Culture', 'Health', 'Business']
+
+const isUrlValid = computed(() => {
+  try {
+    const u = new URL(url.value)
+    return (u.protocol === 'https:' || u.protocol === 'http:') || u.hostname !== ''
+  } catch {
+    return false
+  }
+})
 </script>

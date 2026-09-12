@@ -1,0 +1,20 @@
+{
+  "https://example.com/article-1": {
+    "url": "https://example.com/article-1",
+    "title": "Comment fonctionne le rendu SSR en Vue.js",
+    "description": "Un guide complet sur le rendu côté serveur avec Nuxt et les enjeux de performance qui l'accompagnent.",
+    "image": "https://picsum.photos/seed/article1/800/450"
+  },
+  "https://example.com/article-2": {
+    "url": "https://example.com/article-2",
+    "title": "Les bases de TypeScript pour les développeurs JavaScript",
+    "description": "",
+    "image": "https://picsum.photos/seed/article2/800/450"
+  },
+  "https://example.com/article-3": {
+    "url": "https://example.com/article-3",
+    "title": "Un titre vraiment très long qui va tester si ton UI gère correctement le débordement de texte dans une carte d'article sans casser la mise en page",
+    "description": "Description normale ici.",
+    "image": ""
+  }
+}

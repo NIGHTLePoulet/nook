@@ -16,3 +16,5 @@ export interface ogMetaData {
   description: string
   image: string
 }
+
+export type mockMetaData = Record<string, ogMetaData>
