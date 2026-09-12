@@ -134,7 +134,7 @@ import PreviousPageIcon from '@/components/icons/PreviousPageIcon.vue'
 
 const route = useRoute()
 const toolbarToggle = inject(modalDisplayKey)
-const url = ref('https://example.com/article-1')
+const url = ref('')
 
 if (route.name === 'modal.create') {
   toolbarToggle.value = false
