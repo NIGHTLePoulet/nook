@@ -33,32 +33,8 @@
         </label>
 
         <article v-if="isUrlValid">
-          <div class="rounded-[14px] overflow-hidden mb-6 bg-card border border-border shadow-sm">
-            <div class="h-45 bg-muted relative">
-              <span
-                class="absolute bottom-3 left-3 px-2 py-0.5 rounded-full text-xs font-semibold bg-primary text-primary-foreground"
-                >Preview</span
-              >
-              <img src="#" alt="Article image" class="size-full object-cover" />
-            </div>
-
-            <div class="p-4">
-              <h2
-                class="text-base font-semibold leading-snug font-display mb-1 text-card-foreground"
-              >
-                Title
-              </h2>
-              <p class="text-xs leading-relaxed line-clamp-2 text-muted-foreground">
-                A growing movement of developers is pushing back against the always-ship culture.
-                They argue that thoughtful pacing produces better products, healthier teams, and
-                longer-lasting companies.
-              </p>
-
-              <p class="text-xs mt-2 text-muted-foreground">n min read</p>
-            </div>
-          </div>
-
-          <div role="group" aria-label="Article category" class="mb-5">
+          <FormCard />
+          <div role="group" aria-label="Article category" class="mb-5 mt-6">
             <h3 class="text-xs font-semibold mb-2 uppercase tracking-wide text-muted-foreground">
               Category
             </h3>
@@ -131,6 +107,7 @@ import { computed, inject, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { modalDisplayKey } from '@/keys.ts'
 import PreviousPageIcon from '@/components/icons/PreviousPageIcon.vue'
+import FormCard from '@/components/Card/FormCard.vue'
 
 const route = useRoute()
 const toolbarToggle = inject(modalDisplayKey)

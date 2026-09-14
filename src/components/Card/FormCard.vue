@@ -1,0 +1,32 @@
+<template>
+  <Card>
+    <template #card__media>
+      <div class="h-45 bg-muted relative">
+        <span
+          class="absolute bottom-3 left-3 px-2 py-0.5 rounded-full text-xs font-semibold bg-primary text-primary-foreground"
+          >Preview</span
+        >
+        <img src="#" alt="Article image" class="size-full object-cover" />
+      </div>
+    </template>
+
+    <template #card__content>
+      <div>
+        <h2 class="text-base font-semibold leading-snug font-display mb-1 text-card-foreground">
+          Title
+        </h2>
+        <p class="text-xs leading-relaxed line-clamp-2 text-muted-foreground">
+          A growing movement of developers is pushing back against the always-ship culture. They
+          argue that thoughtful pacing produces better products, healthier teams, and longer-lasting
+          companies.
+        </p>
+
+        <p class="text-xs mt-2 text-muted-foreground">n min read</p>
+      </div>
+    </template>
+  </Card>
+</template>
+
+<script setup lang="ts">
+import Card from '@/components/Card/Card.vue'
+</script>
