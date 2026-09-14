@@ -10,7 +10,7 @@
       <div class="absolute size-2.5 top-3 left-3 rounded-full bg-primary"></div>
 
       <button
-        class="absolute bottom-3 right-3 size-7 rounded-full flex items-center justify-center text-white bg-black/55 opacity-0"
+        class="absolute bottom-3 z-3 right-3 size-7 rounded-full flex items-center justify-center text-white bg-black/55 opacity-0"
         title="Delete article"
       >
         <DeleteIcon />
@@ -39,7 +39,7 @@
 
       <div class="flex flex-wrap gap-1">
         <span
-          class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-muted text-muted-foreground cursor-pointer"
+          class="z-3 inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-muted text-muted-foreground cursor-pointer"
           >#web</span
         >
       </div>
@@ -50,7 +50,7 @@
         <div class="flex items-center gap-1.5">
           <span class="text-xs text-muted-foreground">Unread</span>
           <button
-            class="inline-flex h-6 w-11 relative items-center rounded-full bg-muted"
+            class="inline-flex h-6 w-11 relative items-center rounded-full bg-muted z-3"
             title="Mark as read"
           >
             <span class="inline-block size-4 rounded-full bg-white shadow-sm translate-x-1"></span>
