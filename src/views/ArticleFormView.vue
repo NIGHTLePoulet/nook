@@ -16,7 +16,7 @@
         Paste a URL and we will fetch the details automatically.
       </p>
 
-      <form  @submit.prevent method="POST">
+      <form @submit.prevent method="POST">
         <label class="mb-6 inline-block w-full">
           <span
             class="inline-block text-xs font-semibold mb-1.5 uppercase tracking-wide text-muted-foreground"
@@ -136,6 +136,7 @@ const route = useRoute()
 const toolbarToggle = inject(modalDisplayKey)
 const url = ref('')
 
+
 if (route.name === 'modal.create') {
   toolbarToggle.value = false
 }
@@ -145,7 +146,7 @@ const categoryButtonArray = ['Technology', 'Design', 'Science', 'Culture', 'Heal
 const isUrlValid = computed(() => {
   try {
     const u = new URL(url.value)
-    return (u.protocol === 'https:' || u.protocol === 'http:') || u.hostname !== ''
+    return u.protocol === 'https:' || u.protocol === 'http:' || u.hostname !== ''
   } catch {
     return false
   }
