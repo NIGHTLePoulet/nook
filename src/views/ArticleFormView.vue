@@ -136,7 +136,6 @@ const route = useRoute()
 const toolbarToggle = inject(modalDisplayKey)
 const url = ref('')
 
-
 if (route.name === 'modal.create') {
   toolbarToggle.value = false
 }

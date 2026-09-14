@@ -5,7 +5,8 @@
       <p class="text-xs text-muted-foreground">Page n of n</p>
     </div>
 
-    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <div id="display-cards" class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    </div>
   </div>
 </template>
 
@@ -15,10 +16,7 @@ import { getOgMetadata } from '@/services/ogService.ts'
 import { onMounted } from 'vue'
 import { useStorageStore } from '@/stores/useStorageStore.ts'
 
-
 const store = useStorageStore()
-
-console.log(store.articles)
 
 /*onMounted(async () => {
   const data = await getOgMetadata('https://example.com/article-2')
