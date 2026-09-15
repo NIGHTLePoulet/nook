@@ -13,14 +13,4 @@
 
 <script setup lang="ts">
 import ArticleCard from '@/components/Card/ArticleCard.vue'
-import { getOgMetadata } from '@/services/ogService.ts'
-import { onMounted } from 'vue'
-import { useStorageStore } from '@/stores/useStorageStore.ts'
-
-const store = useStorageStore()
-
-/*onMounted(async () => {
-  const data = await getOgMetadata('https://example.com/article-2')
-  console.log(data)
-})*/
 </script>

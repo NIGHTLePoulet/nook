@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <Card :clickable="true">
     <template #card__media>
       <img
         src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=380&fit=crop&auto=format"

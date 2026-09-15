@@ -11,6 +11,8 @@
         Back to library
       </RouterLink>
 
+      {{ article }}
+
       <h1 class="text-3xl font-medium mb-1 font-display text-foreground">Save an article</h1>
       <p class="text-sm mb-8 text-muted-foreground">
         Paste a URL and we will fetch the details automatically.
@@ -32,8 +34,14 @@
           />
         </label>
 
-        <article v-if="isUrlValid">
-          <FormCard />
+        <article v-if="urlToggle">
+          <FormCard
+            v-if="fetchArticle"
+            :title="fetchArticle.title"
+            :description="fetchArticle.description"
+            :image="fetchArticle.image"
+          />
+
           <div role="group" aria-label="Article category" class="mb-5 mt-6">
             <h3 class="text-xs font-semibold mb-2 uppercase tracking-wide text-muted-foreground">
               Category
@@ -93,7 +101,7 @@
         <button
           type="submit"
           class="w-full py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 bg-primary cursor-pointer text-primary-foreground disabled:opacity-40 disabled: disabled:pointer-events-none"
-          :disabled="!isUrlValid"
+          :disabled="!urlToggle"
         >
           Paste a URL above to continue
         </button>
@@ -103,27 +111,46 @@
 </template>
 
 <script setup lang="ts">
-import { computed, inject, ref } from 'vue'
+import { computed, inject, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { modalDisplayKey } from '@/keys.ts'
 import PreviousPageIcon from '@/components/icons/PreviousPageIcon.vue'
 import FormCard from '@/components/Card/FormCard.vue'
+import { getOgMetadata } from '@/services/ogService.ts'
+import type { Article, ogMetaData } from '@/types/article.types.ts'
 
 const route = useRoute()
 const toolbarToggle = inject(modalDisplayKey)
 const url = ref('')
+const urlToggle = ref(false)
+const fetchArticle = ref<ogMetaData>()
+let time: ReturnType<typeof setTimeout> | undefined
 
 if (route.name === 'modal.create') {
   toolbarToggle.value = false
 }
+
+watch(url, async () => {
+  clearTimeout(time)
+  time = setTimeout(async () => {
+    if (isUrlValid.value) {
+      fetchArticle.value = await getOgMetadata(url.value)
+    }
+  }, 500)
+})
 
 const categoryButtonArray = ['Technology', 'Design', 'Science', 'Culture', 'Health', 'Business']
 
 const isUrlValid = computed(() => {
   try {
     const u = new URL(url.value)
-    return u.protocol === 'https:' || u.protocol === 'http:' || u.hostname !== ''
+    const conditions = u.protocol === 'https:' || u.protocol === 'http:' || u.hostname !== ''
+    if (conditions) {
+      urlToggle.value = true
+      return true
+    }
   } catch {
+    urlToggle.value = false
     return false
   }
 })
